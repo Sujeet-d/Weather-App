@@ -8,45 +8,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
-    .bg-body-tertiary {
-      background-color: red;
-    }
-
-    .container-fluid {
-      color: whitesmoke;
-    }
-
-    .my-4 {
-      color: white;
-    }
-
-    .display-6 {
-      color: white;
-    }
-
     .card {
       background: transparent;
       color: thistle;
       border: 1px solid gray;
     }
 
-    .text-body-secondary {
-      --bs-secondary-color: cyan;
-    }
-
     body {
-      background: hsla(352, 100%, 15%, 1);
-
-      background: linear-gradient(90deg, hsla(352, 100%, 15%, 1) 0%, hsla(230, 71%, 22%, 1) 100%);
-
-      background: -moz-linear-gradient(90deg, hsla(352, 100%, 15%, 1) 0%, hsla(230, 71%, 22%, 1) 100%);
-
-      background: -webkit-linear-gradient(90deg, hsla(352, 100%, 15%, 1) 0%, hsla(230, 71%, 22%, 1) 100%);
-    }
-
-    .py-3 {
-      background-color: #0D6EFD;
-      color: white;
+      background: linear-gradient(0deg, hsla(352, 100%, 15%, 1) 0%, hsla(230, 71%, 22%, 1) 100%);
     }
 
     .navbar-brand {
@@ -54,14 +23,9 @@
       font-weight: bold;
     }
 
-    .nav-link {
+    /* .nav-link {
       font-weight: bold;
-    }
-
-    .navbar-nav .nav-link.active,
-    .navbar-nav .nav-link.show {
-      color: blue;
-    }
+    } */
 
     .btn-outline-success {
       border-radius: 10px;
@@ -81,7 +45,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" target="_blank" href="about.html">About This App</a>
@@ -96,17 +60,17 @@
   </nav>
 
   <div class="container">
-    <h1 class="my-4 text-center col-white">Weather of <span id="cityName"></span></h1>
+    <h1 class="my-4 text-center col-white text-light">Weather of <span id="cityName"></span></h1>
     <main>
       <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm" style="--bs-card-border-color: none;">
-            <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">Tempratures</h4>
+            <div class="card-header py-3 bg-primary">
+              <h4 class="my-0 fw-normal text-light">Tempratures</h4>
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title"><span id="temp2"></span><small
-                  class="text-body-secondary fw-light"> &#8451</small></h1>
+                  class="text-info fw-light text-info"> &#8451</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Tempratures <span id="temp"></span>&#8451</li>
                 <li>Minimum Tempratures <span id="min_temp"></span>&#8451</li>
@@ -118,12 +82,12 @@
         </div>
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm" style="--bs-card-border-color: none;">
-            <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">Humidity Info</h4>
+            <div class="card-header py-3 bg-primary">
+              <h4 class="my-0 fw-normal text-light">Humidity Info</h4>
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small
-                  class="text-body-secondary fw-light"> %</small></h1>
+                  class="text-info fw-light"> %</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Feels like <span id="feels_like"></span>&#8451</li>
                 <li>Humidity <span id="humidity"></span>%</li>
@@ -140,7 +104,7 @@
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small
-                  class="text-body-secondary fw-light"> km/hr</small></h1>
+                  class="text-info fw-light"> km/hr</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Wind speed <span id="wind_speed"></span>km/hr</li>
                 <!-- <li>Wind degree <span id="wind_degrees"></span></li> -->
@@ -153,7 +117,7 @@
         </div>
       </div>
 
-      <h2 class="display-6 text-center mb-4">Weather for other places</h2>
+      <h2 class="display-6 text-center mb-4 text-light">Weather of other places</h2>
 
       <div class="table-responsive" style="--bs-body-bg: transparent;">
         <table class="table text-center" style="
@@ -179,7 +143,7 @@
               <!-- <td><span id="cloud_pct"></span></td> -->
               <td><span id="temp5"></span> &#8451</td>
               <td><span id="feels_like5"></span> &#8451</td>
-              <td><span id="humidity5"></span>%</td>
+              <td><span id="humidity5"></span> %</td>
               <td><span id="max_temp5"></span> &#8451</td>
               <td><span id="min_temp5"></span> &#8451</td>
               <td><span id="cloud_pct5"></span></td>
@@ -192,7 +156,7 @@
               <th scope="row" class="text-start">New York</th>
               <td><span id="temp6"></span> &#8451</td>
               <td><span id="feels_like6"></span> &#8451</td>
-              <td><span id="humidity6"></span>%</td>
+              <td><span id="humidity6"></span> %</td>
               <td><span id="max_temp6"></span> &#8451</td>
               <td><span id="min_temp6"></span> &#8451</td>
               <td><span id="cloud_pct6"></span></td>
@@ -208,7 +172,7 @@
               <th scope="row" class="text-start">Sydney</th>
               <td><span id="temp7"></span> &#8451</td>
               <td><span id="feels_like7"></span> &#8451</td>
-              <td><span id="humidity7"></span>%</td>
+              <td><span id="humidity7"></span> %</td>
               <td><span id="max_temp7"></span> &#8451</td>
               <td><span id="min_temp7"></span> &#8451</td>
               <td><span id="cloud_pct7"></span></td>
@@ -221,7 +185,7 @@
               <th scope="row" class="text-start">Tokyo</th>
               <td><span id="temp8"></span> &#8451</td>
               <td><span id="feels_like8"></span> &#8451</td>
-              <td><span id="humidity8"></span>%</td>
+              <td><span id="humidity8"></span> %</td>
               <td><span id="max_temp8"></span> &#8451</td>
               <td><span id="min_temp8"></span> &#8451</td>
               <td><span id="cloud_pct8"></span></td>
