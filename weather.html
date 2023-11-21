@@ -5,31 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weather App</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
-    .card {
-      background: transparent;
-      color: thistle;
-      border: 1px solid gray;
-    }
-
     body {
       background: linear-gradient(0deg, hsla(352, 100%, 15%, 1) 0%, hsla(230, 71%, 22%, 1) 100%);
-    }
-
-    .navbar-brand {
-      color: red;
-      font-weight: bold;
-    }
-
-    /* .nav-link {
-      font-weight: bold;
-    } */
-
-    .btn-outline-success {
-      border-radius: 10px;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -37,7 +16,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Weather App</a>
+      <a class="navbar-brand text-danger fw-bold" href="#">Weather App</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,15 +24,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-primary fw-bold" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="about.html">About This App</a>
+            <a class="nav-link fw-bold" target="_blank" href="about.html">About This App</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-danger" type="submit" id="submit">Search</button>
+          <button class="btn btn-outline-danger fw-bold" type="submit" id="submit">Search</button>
         </form>
       </div>
     </div>
@@ -68,15 +47,14 @@
             <div class="card-header py-3 bg-primary">
               <h4 class="my-0 fw-normal text-light">Tempratures</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body card-body bg-secondary text-light rounded-bottom">
               <h1 class="card-title pricing-card-title"><span id="temp2"></span><small
-                  class="text-info fw-light text-info"> &#8451</small></h1>
+                  class="text-info fw-light text-info fw-bold"> &#8451</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Tempratures <span id="temp"></span>&#8451</li>
                 <li>Minimum Tempratures <span id="min_temp"></span>&#8451</li>
                 <li>Maximum Tempratures <span id="max_temp"></span>&#8451</li>
               </ul>
-              <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
             </div>
           </div>
         </div>
@@ -85,9 +63,9 @@
             <div class="card-header py-3 bg-primary">
               <h4 class="my-0 fw-normal text-light">Humidity Info</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body bg-secondary text-light rounded-bottom">
               <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small
-                  class="text-info fw-light"> %</small></h1>
+                  class="text-info fw-light fw-bold"> %</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Feels like <span id="feels_like"></span>&#8451</li>
                 <li>Humidity <span id="humidity"></span>%</li>
@@ -102,9 +80,9 @@
             <div class="card-header py-3 text-bg-primary border-primary">
               <h4 class="my-0 fw-normal">Wind Info</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body bg-secondary text-light rounded-bottom">
               <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small
-                  class="text-info fw-light"> km/hr</small></h1>
+                  class="text-info fw-light fw-bold"> km/hr</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Wind speed <span id="wind_speed"></span>km/hr</li>
                 <!-- <li>Wind degree <span id="wind_degrees"></span></li> -->
